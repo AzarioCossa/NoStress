@@ -41,7 +41,6 @@ app.engine(
         }
     })
   );
-
 // view engine setup
 app.set('views', path.join(process.cwd(), 'src/views'));
 app.set('view engine', 'hbs');

@@ -5,7 +5,7 @@ const router = Router();
 
 // Definindo uma rota de exemplo
 router.get('/', (req: Request, res: Response) => {
-  res.send('Bem-vindo ao SemStress!');
+  res.render('index');
 });
 
 
