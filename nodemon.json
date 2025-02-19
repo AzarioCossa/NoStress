@@ -1,0 +1,5 @@
+{
+    "ext": "*",
+    "ignore": ["tests", "public"],
+    "exec": "ts-node ./www.ts"
+}

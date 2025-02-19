@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary-color: #003340;
+            --secondary-color: #e8f5f8;
+            --text-color: white;
+            --highlight-color: #00796b;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f8f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--primary-color);
+            color: var(--text-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        table td {
+            background-color: var(--secondary-color);
+            color: #003340;
+            border-bottom: 1px solid #ccc;
+        }
+
+        table tr:nth-child(even) td {
+            background-color: #eef7f9;
+        }
+
+        ol {
+            padding: 0 20px;
+            margin: 20px 0;
+            list-style: decimal;
+        }
+
+        ol p {
+            margin: 5px 0;
+            color: var(--primary-color);
+        }
+
+        .remarks {
+            background: var(--primary-color);
+            padding: 15px;
+            margin-top: 20px;
+            border-left: 5px solid var(--highlight-color);
+            color: var(--text-color);
+            border-radius: 5px;
+        }
+
+        .remarks h3 {
+            margin-top: 0;
+        }
+    </style>
+    <title>PDF - Contrôle</title>
+</head>
+<body>
+<h1>Contrôle de {{control_type}}</h1>
+<table>
+    <tr>
+        <th>Date</th>
+        <td>{{control_date}}</td>
+    </tr>
+    <tr>
+        <th>Id du formulaire</th>
+        <td>{{control_id}}</td>
+    </tr>
+    <tr>
+        <th>Atelier</th>
+        <td>{{workshop}}</td>
+    </tr>
+    <tr>
+        <th>Opérateur</th>
+        <td>{{operator}}</td>
+    </tr>
+    <tr>
+        <th>Machine</th>
+        <td>{{machine_number}}</td>
+    </tr>
+</table>
+
+<h2>Instructions :</h2>
+<ol>
+    {{#each instructions}}
+        <li>
+            <p><strong>{{this.instruction}}</strong>: <span>{{this.control_state}}</span></p>
+        </li>
+    {{/each}}
+</ol>
+
+<div class="remarks">
+    <h3>Remarques :</h3>
+    <p>{{remarks}}</p>
+</div>
+</body>
+</html>
