@@ -10,7 +10,6 @@ import flash from 'connect-flash';
 import dotenv from 'dotenv';
 
 import { engine as exphbs } from 'express-handlebars';
-import Handlebars from "handlebars";
 import indexRouter from './src/routes/index.router';
 
 const app = express();

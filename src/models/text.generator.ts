@@ -1,7 +1,8 @@
 import { ApiRepository } from '../repositories/api.repository';
 import { TextStructure } from './text.structure';
+import { ApiResponse } from './types/api.response.type';
 
-export class AIContentGenerator {
+export class TextGenerator {
     private repository: ApiRepository;
     private machineRole: string;
     private textStructure: TextStructure;
@@ -20,16 +21,16 @@ export class AIContentGenerator {
         return {
             contents: [{
                 parts: [{
-                    text: `${this.machineRole}, faça um trabalho com ${this.pageNumber} páginas tendo como estrutura ${this.textStructure.structure} sobre o tema ${this.topic}.`,
+                    text: `${this.machineRole}, faça um trabalho com ${this.pageNumber} páginas tendo como estrutura ${this.textStructure.structure} e ${this.textStructure.rules} sobre o tema ${this.topic}.`,
                 }]
             }]
         };
     }
 
-    public async generateContent(): Promise<void> {
+    public async generateContent(): Promise<ApiResponse | undefined> {
         try {
             const response = await this.repository.generateContent(this.getRequestBody());
-            console.log('Generated Content:', JSON.stringify(response, null, 2));
+            return response as ApiResponse;
         } catch (error) {
             console.error('Failed to generate content:', error);
         }

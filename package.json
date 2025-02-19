@@ -8,7 +8,8 @@
         "start:prod": "node ./dist/www.js",
         "build": "tsc",
         "lint": "eslint .",
-        "test": "jest --coverage"
+        "test": "jest --coverage",
+        "build-css": "sass src/views/scss:public/css"
     },
     "dependencies": {
         "@types/axios": "^0.9.36",
@@ -19,6 +20,7 @@
         "cookie-parser": "~1.4.4",
         "date-fns": "^4.1.0",
         "debug": "~2.6.9",
+        "docx": "^9.2.0",
         "dotenv": "^16.4.5",
         "express": "^4.21.1",
         "express-dart-sass": "^1.0.4",
