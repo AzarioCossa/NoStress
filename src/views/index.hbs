@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-
-    <title>SemStress</title>
+  <link rel="stylesheet" href="/css/index.css">	
+  <!--<link rel="stylesheet" href="/css/partials.css">-->
+    <title>NoStress</title>
 </head>
 
 <body>
   <header class="header">
     <div class="logo"></div>
-    <div class="SemStress">
-      <p class="Sem">Sem</p>
-      <p class="Stress">Stress</p>
+    <div class="appName">
+      <p class="no">No</p>
+      <p class="stress">Stress</p>
     </div>
   </header>
 
+  <div class="main-content">
+    <div class="explanation-info">
+      <h1>Procrastinou o trabalho, estás a transpirar soz?</h1>
 
-  <div class="explanation-info">
-    <h1>Não precisa mais se estressar <br>Sem estresse vai te helpar</h1>
+      <h1 class="appName">
+        <span class="no">No</span>Stress vai te helpar!
+      </h1>
+    </div>
+
+    <form class="prompt-form" action="">
+      <input class="prompt-field" type="text" name="prompt" id="prompt" placeholder="Insira o tópico do seu estresse" autocomplete="off">
+      <button class="generate-button" id="generate-button" type="submit">Gerar</button>
+    </form>
   </div>
-  <form action="submit">
-    <input type="text" name="topic" id="topic" placeholder="Insira o tópico do seu estresse">
-    <button type="submit">Gerar</button>
-  </form>
+  
 
   <footer>
-    <p class="footer">© 2025 SemStress | Por Azário Cossa</p>
+    <p class="footer">© 2025 NoStress | Por Azário Cossa</p>
   </footer>
 
 </body>

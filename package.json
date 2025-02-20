@@ -9,7 +9,8 @@
         "build": "tsc",
         "lint": "eslint .",
         "test": "jest --coverage",
-        "build-css": "sass src/views/scss:public/css"
+        "build-css": "sass --watch src/views/scss:public/css",
+        "dev": "concurrently \"npm run build-css\" \"nodemon\""
     },
     "dependencies": {
         "@types/axios": "^0.9.36",
@@ -35,7 +36,6 @@
         "mysql2": "^3.11.5",
         "postcss": "^8.5.3",
         "puppeteer": "^24.0.0",
-        "sass": "^1.82.0",
         "vortexql": "^1.1.0",
         "zod": "^3.23.8"
     },
@@ -55,11 +55,12 @@
         "@types/supertest": "^6.0.2",
         "@typescript-eslint/eslint-plugin": "^8.17.0",
         "@typescript-eslint/parser": "^8.17.0",
+        "concurrently": "^6.5.1",
         "eslint": "^8.57.1",
         "globals": "^15.13.0",
         "jest": "^29.7.0",
-        "nodemon": "^3.1.7",
-        "sass": "^1.81.0",
+        "nodemon": "^3.1.9",
+        "sass": "^1.85.0",
         "structured-clone": "^0.2.2",
         "supertest": "^7.0.0",
         "tailwindcss": "^4.0.7",

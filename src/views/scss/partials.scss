@@ -1,0 +1,11 @@
+@import 'variables';
+.appName{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-comfortaa);
+    font-size: 50px;
+    
+    .no{
+        color: var(--main-color);
+    }
+}
