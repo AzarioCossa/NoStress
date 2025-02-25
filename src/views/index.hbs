@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-  <link rel="stylesheet" href="/css/index.css">	
-  <!--<link rel="stylesheet" href="/css/partials.css">-->
-    <title>NoStress</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="/css/index.css">	
+    <link rel="stylesheet" href="/css/loading.css">
+    <link rel="stylesheet" href="/css/templateScreen.css">	
+    <link rel="stylesheet" href="/css/resultScreen.css">
+    <!--<link rel="stylesheet" href="/css/partials.css">-->
+      <title>NoStress</title>
+  </head>
 
-<body>
-  <header class="header">
-    <div class="logo"></div>
-    <div class="appName">
-      <p class="no">No</p>
-      <p class="stress">Stress</p>
+  <body>
+    <header class="header">
+      <div class="logo"></div>
+      <div class="appName">
+        <p class="no">No</p>
+        <p class="stress">Stress</p>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="explanation-info">
+        <h1>Procrastinou o trabalho, estás a transpirar soz?</h1>
+
+        <h1 class="appName">
+          <span class="no">No</span>Stress vai te helpar!
+        </h1>
+      </div>
+
+      <form class="prompt-form" action="">
+        <input class="prompt-field" type="text" name="prompt" id="prompt" placeholder="Insira o tópico do seu estresse" autocomplete="off">
+        <button class="generate-button" id="generate-button" type="submit">Gerar</button>
+      </form>
     </div>
-  </header>
+    <div class="loadingScreen">{{> loading}}</div>
+    <div class="templateSelection">{{> templateSelection}}</div>
+    <div class="resultScreen">{{> result}}</div>
 
-  <div class="main-content">
-    <div class="explanation-info">
-      <h1>Procrastinou o trabalho, estás a transpirar soz?</h1>
+    <footer>
+      <p class="footer">© 2025 NoStress | Por Azário Cossa</p>
+    </footer>
 
-      <h1 class="appName">
-        <span class="no">No</span>Stress vai te helpar!
-      </h1>
-    </div>
 
-    <form class="prompt-form" action="">
-      <input class="prompt-field" type="text" name="prompt" id="prompt" placeholder="Insira o tópico do seu estresse" autocomplete="off">
-      <button class="generate-button" id="generate-button" type="submit">Gerar</button>
-    </form>
-  </div>
+  <script src="/scripts/index.js"></script>
+  </body>
   
-
-  <footer>
-    <p class="footer">© 2025 NoStress | Por Azário Cossa</p>
-  </footer>
-
-</body>
 </html>
