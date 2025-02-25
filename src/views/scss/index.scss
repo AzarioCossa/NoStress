@@ -2,10 +2,9 @@
 
 body{
     font-family: var(--font-comfortaa);
-    font-size: 16px;
+    font-size: 10px;
     color: var(--primary-color);
     background-color: var(--secondary-color);
-    margin-left: 5%;
 
     .appName{
         display: flex;
@@ -17,27 +16,34 @@ body{
 
     header{
         .appName{
-            font-size: 50px;
+            font-size: 40px;
         }
     }
 
     .main-content{
         margin-top: 10%;
+        align-items: center;
         .explanation-info{
             margin-top: 20px;
-            font-size: 1.2rem;
+            font-size: 0.8rem;
+            justify-content: center;
+            h1{
+                align-self: center;
+            }
         }
         .prompt-form{
-            margin-top: 5%;
+            margin-top: 20%;
             display: flex;
             flex-direction: column;
+            align-self: center;
+            align-items: center;	
             .prompt-field{
                 height: 80px;
                 width: 80%;
                 background-color: var(--secondary-color);
                 color: var(--primary-color);
                 border : none;
-                font-size : 20px;
+                font-size : 180%;
                 font-family: var(--font-comfortaa);
                 border-bottom:1px solid var(--main-color);
 
@@ -48,13 +54,15 @@ body{
             }
 
             .generate-button{
-                margin-top: 20px;
-                width: 5%;
+                margin-top: 60px;
+                width: 20%;
                 height: 50px;
+                
                 background-color: var(--main-color);
                 color: var(--primary-color);
                 font-size: 20px;
                 font-family: var(--font-comfortaa);
+                border-radius: 5px;
                 border: none;
                 cursor: pointer;
                 :hover{
@@ -73,4 +81,77 @@ body{
         text-align: center;
         padding: 10px 0;
     }
+}
+
+@media (min-width: 768px) {
+   
+    body{
+        font-size: 10px;
+    
+        header{
+            .appName{
+                font-size: 50px;
+            }
+        }
+    
+        .main-content{
+            margin-top: 10%;
+            .explanation-info{
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                font-size: 1.2rem;
+            }
+            .prompt-form{
+                margin-top: 5%;
+                display: flex;
+                flex-direction: column;
+                .prompt-field{
+                    height: 80px;
+                    width: 80%;
+                    background-color: var(--secondary-color);
+                    color: var(--primary-color);
+                    border : none;
+                    font-size : 20px;
+                    font-family: var(--font-comfortaa);
+                    border-bottom:1px solid var(--main-color);
+                    text-align: center;
+    
+                   :focus {
+                        outline: none;
+                        border : 0 0 0 1px solid var(--main-color);
+                    }
+                }
+    
+                .generate-button{
+                    margin-top: 40px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    width: auto;
+                    height: 50px;
+                    background-color: var(--main-color);
+                    color: var(--primary-color);
+                    font-size: 20px;
+                    font-family: var(--font-comfortaa);
+                    border: none;
+                    cursor: pointer;
+                    :hover{
+                        background-color: var(--focus-color);
+                    }
+                }
+            }
+        }
+    
+        .footer {
+            font-size: medium;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    }
+    
 }

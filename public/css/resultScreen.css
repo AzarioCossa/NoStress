@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+:root {
+  --main-color: #0A01FF;
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --font-comfortaa: "Comfortaa", cursive;
+}
+
+.resultScreen .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+.resultScreen .modal .modal-content {
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=resultScreen.css.map */
